@@ -27,7 +27,7 @@ TestPhoneBook.o: TestPhoneBook.cpp PhoneEntry.h	PhoneBook.h
 TestPhoneBook: TestPhoneBook.o PhoneBook.o PhoneEntry.o
 	$(CC) TestPhoneBook.o PhoneBook.o PhoneEntry.o -L/usr/lib -o TestPhoneBook -L/usr/local/lib -lcgicc -lmysqlcppconn
 
-phoneApp: phoneApp.cpp 
+phoneApp.o: phoneApp.cpp 
 	$(CC) -c $(CFLAGS) PhoneApp.cpp
 
 phoneApp: phoneApp.o PhoneBook.o PhoneEntry.o
