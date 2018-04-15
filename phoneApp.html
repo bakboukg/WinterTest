@@ -53,7 +53,7 @@
                     <div class="row px-3">
                         <div class="input-group">
 
-                            <select class="custom-select dropup" style="width:21%">
+                            <select class="custom-select dropup" style="width:21%" id="DaysList">
                                 <option selected>Day</option>
                                 <option value="1">Sunday</option>
                                 <option value="2">Monday</option>
@@ -64,14 +64,14 @@
                                 <option value="7">Saturday</option>
                             </select>
 
-                            <select class="custom-select dropup" style="width:21%">
+                            <select class="custom-select dropup" style="width:21%" id="ShiftsList">
                                 <option selected>Shift</option>
                                 <option value="1">6:00AM - 9:00AM</option>
                                 <option value="2">6:00PM - 10:00PM</option>
                                 <option value="3">10:00PM - 6:00AM</option>
                             </select>
 
-                            <select class="custom-select dropup" style="width:21%">
+                            <select class="custom-select dropup" style="width:21%" id="SidesList">
                                 <option selected>Side</option>
                                 <option value="1">Men's</option>
                                 <option value="2">Women's</option>
@@ -82,7 +82,7 @@
                                 <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="sr-only">Toggle Dropdown</span>
                                 </button>
-                                <div class="dropdown-menu">
+                                <div class="dropdown-menu" id="SearchOptions">
                                   <a class="dropdown-item" href="#">Search</a>
                                   <a class="dropdown-item" href="#">Search All</a>
                                 </div>
@@ -103,7 +103,7 @@
                 <div class="card p-3" style="height: 86vh">
                     <div class="row px-3">
 
-                    <div class="input-group" style="width:100%">
+                    <div class="input-group" style="width:100%" id="NameSearch">
                         <input class="form-control border-secondary px-3" type="search" placeholder="search">
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary" type="button">
