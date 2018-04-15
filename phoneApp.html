@@ -2,164 +2,232 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Sample Search Books">
-    <meta name="author" content="Ghada Bakbouk">
+    <meta name="author" content="Christian Solorio, Elvin Shrestha, Ghada Bakbouk, Tess Neau">
 
-    <title>Phone Book Manager</title>
+    <title>The Winter Sanctuary Volunteer Scheduling Software</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="WS-Logo.png">
 
-    <!-- Bootstrap core CSS -->
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" type="text/css" href="phoneApp.css">
-    
-    <!-- Custom styles for this template -->
+<!--Bootstrap Stylsheets-->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+     <!--Non-Bootstrap Stylsheets-->
+         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+         <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.4/combined/css/gijgo.min.css" rel="stylesheet" type="text/css">
+         <link rel="stylesheet" type="text/css" href="volunteer_schedule.css">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.4/combined/js/gijgo.min.js" type="text/javascript"></script>
+         <script src="volunteer_schedule.js" type="text/javascript"></script>
   </head>
 
   <body>
 
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-	<!-- Brand and toggle get grouped for better mobile display -->
-	<div class="navbar-header">
-	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	    <span class="sr-only">Toggle navigation</span>
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	  </button>
-	  <a class="navbar-brand" href="#">Phone Book App</a>
-	</div>
-
-	<!-- Collect the nav links, forms, and other content for toggling -->
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	  <ul class="nav navbar-nav">
-	    <li class="active"><a href="https://cslab.kenyon.edu">CSLab <span class="sr-only">(current)</span></a></li>
-            <li class="btn-group">
-	      <a href="#" id="searchtype" class="dropdown-toggle selection" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Find Last<span class="caret"></span></a>
-	      <ul class="dropdown-menu" role="menu">
-		<li><a href="#">Find Last</a></li>
-		<li><a href="#">Find First</a></li>
-		<li><a href="#">Find Type</a></li>
-		<li><a href="#">Add Entry</a></li>
-		<li><a href="#">Find Number</a></li>
-	      </ul>
-	    </li>
-	  </ul>
-	    <form class="navbar-form navbar-left searchbox">
-	    <div class="form-group">
-	      <input type="text" id="search" class="form-control" placeholder="Search">
-	    </div>
-	    <button type="button" id="search-btn" class="btn btn-default">Search</button>
-	    
-	    </form>
-	    <form class="navbar-form navbar-left">
-	    </form>
-	  <ul class="nav navbar-nav navbar-right">
-	    <li><a href="https://cs.kenyon.edu">Kenyon CS</a></li>
-	    </li>
-	  </ul>
-	</div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-      </nav>
-      <hr>
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container results">
-	<div id="searchresults"></div>
-        <div id="loading"  style="display:none;">
-	  <!--<img src="gears.gif"/> -->
-	</div>
-      </div>
-      <div class="container inputdata">
-	<form class="navbar-form navbar-left addboxes">
-	  <div id="addmessage"></div>
-	  <div class="form-group">
-	    <input type="text" id="addfirst" class="form-control" placeholder="First Name">
-	  </div>
-
-	  <div class="form-group">
-	    <input type="text" id="addlast" class="form-control" placeholder="Last Name">
-	  </div>
-
-	  <div class="form-group">
-	    <input type="text" id="addphone" class="form-control"
-		   placeholder="Phone number">
-	  </div>
-	  <div class="form-group">
-	    <input type="text" id="addtype" class="form-control" placeholder="Type">
-	  </div>
-	  
-	  <button type="button" id="add-btn" class="btn btn-default">Add</button>
-
-	</form>
-      </div>
-
-      <div class="container editdata">
-	<form class="navbar-form navbar-left addboxes">
-	<div id="editmessage"></div>
-	  <div class="form-group">
-	    <input type="text" id="editfirst" class="form-control" placeholder="First Name">
-	  </div>
-
-	  <div class="form-group">
-	    <input type="text" id="editlast" class="form-control" placeholder="Last Name">
-	  </div>
-
-	  <div class="form-group">
-	    <input type="text" id="editphone" class="form-control"
-		   placeholder="Phone number">
-	  </div>
-	  <div class="form-group">
-	    <input type="text" id="edittype" class="form-control" placeholder="Type">
-	  </div>
-
-	  <button type="button" id="edit-btn" class="btn btn-default">Save</button>
-
-	</form>
-      </div>
-      
-      <div class="modal" id="savechanges" tabindex="-1" role="dialog">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-	    <div class="modal-header">
-	      <h5 class="modal-title">Changes Saves</h5>
-	      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		<span aria-hidden="true">&times;</span>
-	      </button>
-	    </div>
-	    <div class="modal-body">
-	      <p>Modal body text goes here.</p>
-	    </div>
-	    <div class="modal-footer">
-	      <button type="button" class="btn btn-primary">Save changes</button>
-	      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	    </div>
-	  </div>
-	</div>
-	</div>
-
-      
+  <!--Navbar-->
+    <div class="container.fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <div>
+                            <a href="#" class="pull-left"><img src="WS-Logo.png" id="Logo"  class="img-fluid"></a>
+                        </div>
+                <span class="navbar-brand mb-0" ><h1 style="color: white" class="navbar-font">Volunteer Schedule</h1></span>
+        </nav>
     </div>
 
-	<p>&copy; Kenyon CS 2017</p>
-      </footer>
-    </div> <!-- /container -->
+<!--Main content, underneath Navbar-->
+<div class="col-centered" style="width:97%">
+    <div class="container.fluid">
+        <div class="row">
+            <!--Left Column for calendar and search-->
+            <div class="col-md-6" style="margin-top:1vh" >
+                <div class="card p-3" style="  height: 86vh">
+                    <center>
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <iframe src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=kenyon.edu_2ugpc6mcm5s6vqg3gvhf0hbls4%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                        </iframe>
+                    </div>
+                    </center>
+                    <div class="row px-3 pt-2">
+                        <h6>Search for available volunteers:</h6>
+                    </div>
+
+                    <div class="row px-3">
+                        <div class="input-group">
+
+                            <select class="custom-select dropup" style="width:21%">
+                                <option selected>Day</option>
+                                <option value="1">Sunday</option>
+                                <option value="2">Monday</option>
+                                <option value="3">Tuesday</option>
+                                <option value="4">Wednesday</option>
+                                <option value="5">Thursday</option>
+                                <option value="6">Friday</option>
+                                <option value="7">Saturday</option>
+                            </select>
+
+                            <select class="custom-select dropup" style="width:21%">
+                                <option selected>Shift</option>
+                                <option value="1">6:00AM - 9:00AM</option>
+                                <option value="2">6:00PM - 10:00PM</option>
+                                <option value="3">10:00PM - 6:00AM</option>
+                            </select>
+
+                            <select class="custom-select dropup" style="width:21%">
+                                <option selected>Side</option>
+                                <option value="1">Men's</option>
+                                <option value="2">Women's</option>
+                            </select>
+
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-outline-secondary">Search</button>
+                                <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Search</a>
+                                  <a class="dropdown-item" href="#">Search All</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row px-3">
+
+                    </div>
 
 
-        <!-- Bootstrap core JavaScript
-	     ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-	<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-	  <script src="/bootstrap/js/bootstrap.min.js"></script>
-	  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	  <script src="/assets/ie10-viewport-bug-workaround.js"></script>
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
-	  
-	  <script src="phoneApp.js" type="text/javascript"></script>
+
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-top:1vh">
+                <div class="card p-3" style="height: 86vh">
+                    <div class="row px-3">
+
+                    <div class="input-group" style="width:100%">
+                        <input class="form-control border-secondary px-3" type="search" placeholder="search">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                                </div>
+                            </div>
+                    </div>
+                <div class="row px-3">
+
+                <div class="table-responsive table-bordered table-sm" id="VolunteerList">
+
+                    <table class="table table-hover table-bordered" style="font-size:12px">
+                      <thead class="thead-dark tablehead-center">
+                        <tr>
+                          <th scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th scope="col">Phone Number</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="table-center">Mark</td>
+                          <td class="table-center">Otto</td>
+                          <td class="table-center">(555) 555-5555</td>
+                        </tr>
+                        <tr>
+                          <td class="table-center">Jacob</td>
+                          <td class="table-center">Thornton</td>
+                          <td class="table-center">(555) 555-5555</td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Larry</td>
+                          <td class="table-center">the Bird</td>
+                          <td class="table-center">(555) 555-5555</td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Mark</td>
+                          <td class="table-center">Otto</td>
+                          <td class="table-center">(555) 555-5555</td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Jacob</td>
+                          <td class="table-center">Thornton</td>
+                          <td class="table-center">(555) 555-5555</td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Larry</td>
+                          <td class="table-center">the Bird</td>
+                          <td class="table-center">(555) 555-5555</td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Larry</td>
+                          <td class="table-center">the Bird</td>
+                          <td class="table-center">(555) 555-5555</td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Larry</td>
+                          <td class="table-center">the Bird</td>
+                          <td class="table-center">(555) 555-5555</td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Larry</td>
+                          <td class="table-center">the Bird</td>
+                          <td class="table-center">(555) 555-5555</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    </div>
+                    </div>
+                    <div class="row px-3">
+                        <div id="VolInfoTitle">
+                            <h6 style="color: white">Volunteer Info</h6>
+                        </div>
+                    </div>
+                    <div class="row px-3">
+                        <table class="table table-borderless" style="font-size:14px">
+                            <tbody>
+                                <tr>
+                                    <td class="table-left"> <b>Name:</b> John </td>
+                                    <td class="table-left"><b>Email 1: </b> jjcoolboy@hotmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-left"><b>Address: </b> 106 Gaskin Ave</td>
+                                    <td class="table-left"><b>Email 2: </b> surfbro217@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-left"><b>City: </b> Gambier</td>
+                                    <td class="table-left"><b>Phone 1: </b> (740) 406-0959</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-left"><b>Zipcode: </b> 43022</td>
+                                    <td class="table-left"><b>Phone 2: </b> (740) 406-0959</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+    <!-- Javascript and Javascript plugins for Bootstrap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
+</body>
+
+</html>
 </body>
 </html>
