@@ -1,4 +1,4 @@
-#include <stdlib.h>
+\#include <stdlib.h>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
@@ -16,8 +16,8 @@
 #include <cppconn/prepared_statement.h>
 
 #define HOST "localhost"
-#define USER "skon"
-#define DB "skon"
+#define USER "bakboukg"
+#define DB "bakboukg"
 
 using namespace std;
 //using namespace sql::mysql;

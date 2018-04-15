@@ -16,7 +16,7 @@
 using namespace std;
 using namespace cgicc; // Needed for AJAX functions.
 
-ofstream log; 
+ofstream login; 
 
 int main() {
   Cgicc cgi;    // Ajax object
@@ -28,9 +28,9 @@ int main() {
   // Create AJAX objects to recieve information from web page.
   form_iterator op = cgi.getElement("operation");
   string operation = **op;
-  log.open("skonphone.log",ios::out | ios::app);
-  log << "Op:" << operation << endl;
-  log.close();
+  login.open("bakboukg",ios::out | ios::app);
+  login << "Op:" << operation << endl;
+  login.close();
   string output = "Error =- Operation not support yet!";
   if (operation == "Find Last") {
     form_iterator searchString = cgi.getElement("find");

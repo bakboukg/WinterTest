@@ -2,7 +2,7 @@
 # For CSC3004 Software Development
 
 # Put your user name below:
-USER= skon
+USER= bakboukg
 
 CC= g++
 
@@ -28,7 +28,7 @@ TestPhoneBook: TestPhoneBook.o PhoneBook.o PhoneEntry.o
 	$(CC) TestPhoneBook.o PhoneBook.o PhoneEntry.o -L/usr/lib -o TestPhoneBook -L/usr/local/lib -lcgicc -lmysqlcppconn
 
 phoneApp.o: phoneApp.cpp 
-	$(CC) -c $(CFLAGS) PhoneApp.cpp
+	$(CC) -c $(CFLAGS) phoneApp.cpp
 
 phoneApp: phoneApp.o PhoneBook.o PhoneEntry.o
 	$(CC) phoneApp.o PhoneBook.o PhoneEntry.o -o phoneApp -L/usr/local/lib -lcgicc -lmysqlcppconn
@@ -41,13 +41,13 @@ PutCGI: phoneApp
 	ls -l /usr/lib/cgi-bin/
 
 PutHTML:
-	cp phoneApp.html /var/www/html/class/ssd/$(USER)/PhoneAppComplete
-	cp phoneApp.js /var/www/html/class/ssd/$(USER)/PhoneAppComplete
-	cp phoneApp.css /var/www/html/class/ssd/$(USER)/PhoneAppComplete
+	cp phoneApp.html /var/www/html/class/ssd/$(USER)/PhoneAppComplete2
+	cp phoneApp.js /var/www/html/class/ssd/$(USER)/PhoneAppComplete2
+	cp phoneApp.css /var/www/html/class/ssd/$(USER)/PhoneAppComplete2
 
 
 	echo "Current contents of your HTML directory: "
-	ls -l /var/www/html/class/ssd/$(USER)/PhoneAppComplete
+	ls -l /var/www/html/class/ssd/$(USER)/PhoneAppComplete2
 
 clean:
 	rm -f *.o  phoneApp 
