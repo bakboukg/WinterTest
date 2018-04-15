@@ -4,13 +4,12 @@ var operation;  // operation
 var editid;
 
 $(document).ready(function () {
-    $('.editdata').hide();
-    $("#search-btn").click(getMatches);
-    $("#add-btn").click(addEntry);
+    $('.VolunteerList').hide();
+    $("#NameSearch").click(getMatches);
     operation = "Find Last";
     $("#clear").click(clearResults);
 
-    $(".dropdown-menu li a").click(function(){
+    $(".SearchOptions li a").click(function(){
 	console.log("pick!"+$(this).text());
 	$(this).parents(".btn-group").find('.selection').text($(this).text());
 	operation=$(this).text();
@@ -39,6 +38,7 @@ function changeOperation(operation){
 
 // Build output table from comma delimited list
 function buildTable(list) {
+	
     var a = list.split(",");
     if (a.length < 1) {
 	return "<h3>Internal Error</h3>";
