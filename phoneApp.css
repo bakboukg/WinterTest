@@ -1,2 +1,65 @@
+body {
+   overflow-x: hidden;
+}
 
-tr:hover {background-color: #00FF7F}
+#VolunteerList{
+    overflow-y: scroll;
+    position: relative;
+    width: 100%;
+    height: 200px;
+
+}
+
+#Logo {
+    height: 7vh;
+    padding-right: 1vw;
+    width: auto;
+}
+
+#VolInfoTitle {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    height: 4vh;
+    background-color: #212121;
+}
+
+#VolunteerInfo{
+    overflow-y: scroll;
+    position: relative;
+    width: 100%;
+    height: 29vh;
+}
+
+.tablehead-center {
+    text-align: center;
+}
+
+.table-center {
+    text-align: center;
+    width: 5vw;
+}
+
+.table-left {
+    text-align: left;
+    width: 12vw;
+}
+
+.table-right {
+    text-align: right;
+    width: 12vw;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.navbar-font {
+    font-family: "Georgia",serif;
+}
+
+.navbar-custom {
+    background-color: #505050;
+}
