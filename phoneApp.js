@@ -5,7 +5,7 @@ var editid;
 
 $(document).ready(function () {
     $('.VolunteerList').hide();
-    operation = "Search";
+    operation = "SearchAll";
 
     $(".SearchOptions li a").click(function(){
 	console.log("pick!"+$(this).text());
