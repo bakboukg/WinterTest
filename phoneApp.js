@@ -22,18 +22,9 @@ $(document).ready(function () {
 changeOperation(operation);
 
 function changeOperation(operation){
-    if(operation=="Add Entry"){
-	$('#addmessage').empty();
-	$('.inputdata').show();
-	$('.searchbox').hide();
-	$('.results').hide();
-	$('.editdata').hide();}
-    else{
-	$('.editdata').hide();
-	$('.inputdata').hide();
-	$('.results').show();
-	$('.searchbox').show();
-    }    
+    if(operation=="SearchAll"){
+	$('.VolunteerList').show();
+       
 }
 
 // Build output table from comma delimited list
