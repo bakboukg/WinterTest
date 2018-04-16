@@ -5,8 +5,7 @@ var editid;
 
 $(document).ready(function () {
     $('.VolunteerList').hide();
-    $("#NameSearch").click(getMatches);
-    operation = "Find Last";
+    operation = "Search";
     $("#clear").click(clearResults);
 
     $(".SearchOptions li a").click(function(){
@@ -24,6 +23,7 @@ changeOperation(operation);
 function changeOperation(operation){
     if(operation=="SearchAll"){
 	$('.VolunteerList').show();
+
        
 }
 
