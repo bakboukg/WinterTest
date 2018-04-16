@@ -5,19 +5,19 @@ var editid;
 
 $(document).ready(function () {
     $('.VolunteerList').hide();
-    operation = "SearchAll";
+    //operation = "SearchAll";
 
-    $(".SearchOptions li a").click(function(){
-	console.log("pick!"+$(this).text());
-	$(this).parents(".btn-group").find('.selection').text($(this).text());
-	operation=$(this).text();
-	changeOperation(operation);
-    });
+    //$(".SearchOptions li a").click(function(){
+	//console.log("pick!"+$(this).text());
+	//$(this).parents(".btn-group").find('.selection').text($(this).text());
+	//operation=$(this).text();
+	//changeOperation(operation);
+   // });
 
 
 });
 
-changeOperation(operation);
+//changeOperation(operation);
 
 function changeOperation(operation){
     if(operation=="SearchAll"){
