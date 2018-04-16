@@ -129,6 +129,6 @@ function addEntry(){
 	error: function(){alert("Error: Something went wrong");}
     });
 }
-    
+}
 
     
