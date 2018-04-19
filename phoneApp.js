@@ -4,7 +4,7 @@ var operation;  // operation
 var editid;
 
 $(document).ready(function () {
-    $("VolunteerList").hide();
+    $('.VolunteerList').hide();
     //operation = "SearchAll";
 
     //$(".SearchOptions li a").click(function(){
