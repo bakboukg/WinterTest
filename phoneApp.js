@@ -6,11 +6,12 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
 
 $(document).ready(function () {
     $('.VolunteerList').hide();
-    //operation = "SearchAll";
+	console.log("hidden");
+   /* operation = "SearchAll";
 
-    //$(".SearchOptions li a").click(function(){
-	//console.log("pick!"+$(this).text());
-	//$(this).parents(".btn-group").find('.selection').text($(this).text());
+    $(".SearchOptions li a").click(function(){
+	console.log("pick!"+$(this).text());
+	$(this).parents(".btn-group").find('.selection').text($(this).text());*/
 	//operation=$(this).text();
 	//changeOperation(operation);
    // });
