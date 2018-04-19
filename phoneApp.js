@@ -9,28 +9,28 @@ $(document).ready(function () {
 	$('#VolInfo').hide();
 	$('#VolInfoTitle').hide();
 	console.log("hidden");
-   /* operation = "SearchAll";
+    operation = "SearchAll";
 
     $(".SearchOptions li a").click(function(){
 	console.log("pick!"+$(this).text());
 	$(this).parents(".btn-group").find('.selection').text($(this).text());*/
-	//operation=$(this).text();
-	//changeOperation(operation);
-   // });
+	operation=$(this).text();
+	changeOperation(operation);
+    });
 
 
 });
 
-//changeOperation(operation);
+changeOperation(operation);
 
-/*function changeOperation(operation){
+function changeOperation(operation){
     if(operation=="SearchAll"){
 	$('.VolunteerList').show();
 
        
 }
 
-// Build output table from comma delimited list
+/*// Build output table from comma delimited list
 function buildTable(list) {
 	
     var a = list.split(",");
