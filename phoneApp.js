@@ -29,6 +29,7 @@ function changeOperation(operation){
 
        
 }
+}
 
 /*// Build output table from comma delimited list
 function buildTable(list) {
