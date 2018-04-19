@@ -118,10 +118,8 @@ function processResults(results) {
 function clearResults() {
     $('#searchresults').empty();
 }
-
+*/
 function getMatches(){
-    $('.editdata').hide();
-    $('#searchresults').empty();
     $.ajax({
 	url: '/cgi-bin/bakboukg_phoneAppComplete.cgi?find='+$('#search').val()+'&operation='+operation,
 	dataType: 'text',
@@ -130,7 +128,7 @@ function getMatches(){
     });
 }
 
-function addEntry(){
+/*function addEntry(){
     console.log("Attempting to add an entry");
     console.log("Firstname:" + $('#addfirst').val());
     $('#searchresults').empty();
@@ -142,5 +140,4 @@ function addEntry(){
     });
 }
 }
-
 */
