@@ -104,6 +104,7 @@ function processDelete(){
 	error: function(){alert("Error: Something went wrong");}
     });
 }
+*/
 function processResults(results) {
     $('#editmessage').empty();
     $('#addmessage').empty();
@@ -119,7 +120,7 @@ function processResults(results) {
 function clearResults() {
     $('#searchresults').empty();
 }
-*/
+
 function getMatches(){
 	console.log("Day"+$('#DaysList').val()+" Shift"+$('#ShiftsList').val()+" Side"+$('#SidesList').val());
     $.ajax({
