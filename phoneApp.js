@@ -2,6 +2,7 @@
 // Jim Skon, Kenyon College, 2017
 var operation;  // operation
 var editid;
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script;
 
 $(document).ready(function () {
     $('.VolunteerList').hide();
