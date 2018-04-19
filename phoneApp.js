@@ -33,7 +33,7 @@ function changeOperation(operation){
 }
 }
 
-/*// Build output table from comma delimited list
+// Build output table from comma delimited list
 function buildTable(list) {
 	
     var a = list.split(",");
@@ -54,7 +54,7 @@ function buildTable(list) {
 	return result;
     }
 }
-
+/*
 function processEdit(){
     $('#searchresults').empty();
     $('.editdata').show();
