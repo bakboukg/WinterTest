@@ -31,6 +31,7 @@ function changeOperation(operation){
 
        }
 	else {
+		getMatches();
 	$('#VolunteerList').hide();
 	    $('#VolInfo').hide();
 	$('#VolInfoTitle').hide();
