@@ -11,9 +11,9 @@ $(document).ready(function () {
 	console.log("hidden");
     operation = "SearchAll";
 
-    $(".SearchOptions li a").click(function(){
+    $('#SearchOptions li a').click(function(){
 	console.log("pick!"+$(this).text());
-	$(this).parents(".btn-group").find('.selection').text($(this).text());*/
+	//$(this).parents(".btn-group").find('.selection').text($(this).text());
 	operation=$(this).text();
 	changeOperation(operation);
     });
