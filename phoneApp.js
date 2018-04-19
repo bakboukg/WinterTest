@@ -29,8 +29,14 @@ function changeOperation(operation){
 	    $('#VolInfo').show();
 	$('#VolInfoTitle').show();
 
-       
-}
+       }
+	else {
+	$('#VolunteerList').hide();
+	    $('#VolInfo').hide();
+	$('#VolInfoTitle').hide();
+
+       }
+	
 }
 
 // Build output table from comma delimited list
