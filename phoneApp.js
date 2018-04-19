@@ -19,7 +19,7 @@ $(document).ready(function () {
 
 //changeOperation(operation);
 
-<!--function changeOperation(operation){
+/*function changeOperation(operation){
     if(operation=="SearchAll"){
 	$('.VolunteerList').show();
 
@@ -130,4 +130,4 @@ function addEntry(){
 }
 }
 
-    -->
+*/
