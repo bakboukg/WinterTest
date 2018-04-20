@@ -244,7 +244,7 @@ function processResults(results) {
 	$('#VolInfo').show();
 	$('#VolInfoTitle').show();
 	}
-   // $(".show").click(showInfo);
+   $(".show").click(showInfo);
 	//$(".edit").click();
     //$(".delete").click(processDelete);
    // $('#addmessage').text($('#addfirst').val()+" "+$('#addlast').val()+ " ADDED");
