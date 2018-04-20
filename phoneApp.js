@@ -42,7 +42,7 @@ changeOperation(operation);
   function changeOperation(operation){
 
     if(operation=="SearchAll"){
-	$('#VolunteerList').show();
+	//$('#VolunteerList').show();
 
        }
 	else {
