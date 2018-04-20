@@ -48,6 +48,8 @@ changeOperation(operation);
 
     if(operation=="SearchAll"){
 	$('#VolunteerList').show();
+	      $('#searchinfo').hide();
+		$('#VolInfo').hide();
 
        }
 	else {
