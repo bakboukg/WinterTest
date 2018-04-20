@@ -19,7 +19,7 @@ $(document).ready(function () {
 	//$(this).parents(".btn-group").find('.selection').text($(this).text());
 	operation=$(this).text();
 	//changeOperation(operation);
-		   );
+	  });
 	
 	 $("#editEntry").click(function(){
 		 $('#VolInfo').show();
