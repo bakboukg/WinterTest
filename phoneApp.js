@@ -10,7 +10,7 @@ var infobuilt=false;
 
 $(document).ready(function able() {
     $('#VolunteerList').hide();
-	$('#VolInfo').hide();
+	$('#searchinfo').hide();
 	$('#VolInfoTitle').hide();
 	console.log("hidden");
     operation = "SearchAll";
@@ -53,7 +53,7 @@ changeOperation(operation);
 		//$('#searchresults').clear();
 		getMatches();
 	$('#VolunteerList').hide();
-	    $('#VolInfo').hide();
+	    $('#searchinfo').hide();
 	$('#VolInfoTitle').hide();
 
        }
@@ -179,7 +179,7 @@ function buildTable(list) {
 
 
 function showInfo(){
-	 $('#VolInfo').show();
+	 $('#searchinfo').show();
 	$('#VolInfoTitle').show();
  /*   $('#searchresults').empty();
     $('.editdata').show();
@@ -237,7 +237,7 @@ function processResults(results) {
 	if (infobuilt==false)
 	{
    $('#searchinfo').append(buildInfo(results));
-	 $('#VolInfo').show();
+	 $('#searchinfo').show();
 	$('#VolInfoTitle').show();
 	}
    // $(".show").click(showInfo);
