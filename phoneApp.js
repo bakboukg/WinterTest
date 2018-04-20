@@ -145,7 +145,7 @@ function buildTable(list) {
 	
 	return result;
     }
-}
+
 
 function processEdit(){
  /*   $('#searchresults').empty();
