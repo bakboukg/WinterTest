@@ -16,12 +16,12 @@ $(document).ready(function () {
 	//$(this).parents(".btn-group").find('.selection').text($(this).text());
 	operation=$(this).text();
 	//changeOperation(operation);
- var response = prompt("What is your name?");
-
-alert("Hello, " + response);
 
 
 });
+ var response = prompt("What is your name?");
+
+alert("Hello, " + response);
 
 changeOperation(operation);
 
