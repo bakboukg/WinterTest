@@ -2,6 +2,7 @@
 // Jim Skon, Kenyon College, 2017
 var operation;  // operation
 var editid;
+var tablebuilt=false;
 //src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
 //src="https://code.jquery.com/jquery-3.2.1.min.js";
 
@@ -46,7 +47,7 @@ changeOperation(operation);
 
        }
 	else {
-		$('#searchresults').clear();
+		//$('#searchresults').clear();
 		getMatches();
 	$('#VolunteerList').hide();
 	    $('#VolInfo').hide();
@@ -66,6 +67,7 @@ function buildTable(list) {
 	return "<h3>Nothing Found</h3>";
     } else {
     */
+	tablebuilt=true;
 	var result = '<table class="table table-hover table-bordered" style="font-size:12px" >';
 	result += '<thead class="thead-dark tablehead-center">';
 	//var aLen = a.length;
@@ -200,7 +202,10 @@ function processResults(results) {
     //$('#addmessage').empty();
     console.log("Results:"+results);
    // $('#searchresults').empty();
+	if (tablebuilt==false)
+	{
    $('#searchresults').append(buildTable(results));
+	}
     $(".edit").click(processEdit);
     //$(".delete").click(processDelete);
    // $('#addmessage').text($('#addfirst').val()+" "+$('#addlast').val()+ " ADDED");
