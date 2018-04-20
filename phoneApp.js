@@ -26,9 +26,10 @@ $(document).ready(function able() {
 	/* $("#editEntry").click(function(){
 		 $('#VolInfo').show();
 		$('#VolInfoTitle').show();
+		});
 		*/
 		
-});
+
 });
 
  var response = prompt("Enter Password:");
