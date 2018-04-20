@@ -11,6 +11,7 @@ var infobuilt=false;
 $(document).ready(function able() {
     $('#VolunteerList').hide();
 	$('#searchinfo').hide();
+	$('#VolInfo').hide();
 	$('#VolInfoTitle').hide();
 	console.log("hidden");
     operation = "SearchAll";
@@ -54,6 +55,7 @@ changeOperation(operation);
 		getMatches();
 	$('#VolunteerList').hide();
 	    $('#searchinfo').hide();
+		$('#VolInfo').hide();
 	$('#VolInfoTitle').hide();
 
        }
@@ -181,6 +183,7 @@ function buildTable(list) {
 function showInfo(){
 	 $('#searchinfo').show();
 	$('#VolInfoTitle').show();
+	$('#VolInfo').show();
  /*   $('#searchresults').empty();
     $('.editdata').show();
     $("#edit-btn").click(editEntry);
@@ -238,6 +241,7 @@ function processResults(results) {
 	{
    $('#searchinfo').append(buildInfo(results));
 	 $('#searchinfo').show();
+	$('#VolInfo').show();
 	$('#VolInfoTitle').show();
 	}
    // $(".show").click(showInfo);
@@ -247,10 +251,10 @@ function processResults(results) {
    
 }
 
-function clearResults() {
+/*function clearResults() {
     $('#searchresults').empty();
 }
-
+*/
 function getMatches(){
 	console.log("Day"+$('#DaysList').val()+" Shift"+$('#ShiftsList').val()+" Side"+$('#SidesList').val());
     $.ajax({
