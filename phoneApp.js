@@ -20,11 +20,10 @@ $(document).ready(function () {
 	operation=$(this).text();
 	//changeOperation(operation);
 	
-	 $("#editEntry").click($('#VolInfo').show();
-	$('#VolInfoTitle').show(););
-	    
-
-
+	 $("#editEntry").click(function(){
+		 $('#VolInfo').show();
+		$('#VolInfoTitle').show();
+		 );
 });
 });
 
