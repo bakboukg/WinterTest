@@ -42,7 +42,7 @@ changeOperation(operation);
   function changeOperation(operation){
 
     if(operation=="SearchAll"){
-	//$('#VolunteerList').show();
+	$('#VolunteerList').show();
 
        }
 	else {
@@ -197,7 +197,7 @@ function processResults(results) {
     //$('#addmessage').empty();
     console.log("Results:"+results);
    // $('#searchresults').empty();
-    $('#searchresults').append(buildTable(results));
+  //  $('#searchresults').append(buildTable(results));
     $(".edit").click(processEdit);
     //$(".delete").click(processDelete);
    // $('#addmessage').text($('#addfirst').val()+" "+$('#addlast').val()+ " ADDED");
