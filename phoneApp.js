@@ -72,85 +72,85 @@ function buildTable(list) {
 	result += '<thead class="thead-dark tablehead-center">';
 	//var aLen = a.length;
 	//for (var i = 1; i < aLen; i+=5) {
-	    result += '<tr>';
-                      result +=    '<th scope="col">First</th>';
-                      result +=    '<th scope="col">Last</th>';
-                      result +=    '<th scope="col">Phone Number</th>';
-			result +=  '<th scope="col">Options</th>';
-                     result +=   '</tr>';
-                    result +=  '</thead>';
-                     result += '<tbody>';
-                    result +=   ' <tr>';
-                    result +=    '  <td class="table-center">Mark</td>';
-                    result +=     ' <td class="table-center">Otto</td>';
-                     result +=     '<td class="table-center">(555) 555-5555</td>';
-			result +='<td class="table-center"><button type="button" id="one" class="btn btn-primary btn-sm edit">Edit</button> </td>';
-                     result +=   '</tr>';
-                     result +=   '<tr>';
-                      result +=   ' <td class="table-center">Jacob</td>';
-                      result +=    '<td class="table-center">Thornton</td>';
-                      result +=    '<td class="table-center">(555) 555-5555</td>';
-			result += '<td class="table-center"><button type="button"  id="two" class="btn btn-primary btn-sm edit">Edit</button> </td>';
-                      result +=  '</tr>';
-                      result +=  '<tr>';
-
+	result += '<tr>';
+                      result +='<th scope="col">First</th>';
+                      result +='<th scope="col">Last</th>';
+                      result +='<th scope="col">Phone Number</th>';
+			result +='<th scope="col">Options</th>';
+                      result += '</tr>';
+                      result +='</thead>';
+                      result +='<tbody>';
+                      result +=' <tr>';
+                      result += '<td class="table-center">Mark</td>';
+                      result +=' <td class="table-center">Otto</td>';
+                      result += '<td class="table-center">(555) 555-5555</td>';
+			result +='<td class="table-center"><button type="button" id="one1" class="btn btn-primary btn-sm show">Show</button> </td>'
+		      result +='<td class="table-center"><button type="button" id="one2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+                      result += '</tr>';
+                      result += '<tr>';
+                      result += ' <td class="table-center">Jacob</td>';
+                      result += '<td class="table-center">Thornton</td>';
+                      result += '<td class="table-center">(555) 555-5555</td>';
+			result +='<td class="table-center"><button type="button" id="two1" class="btn btn-primary btn-sm show">Show</button> </td>'
+		      result += '<td class="table-center"><button type="button"  id="two2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+                      result +='</tr>';
+                      result +='<tr>';
                       result +=   ' <td class="table-center">Larry</td>';
-                          result +='<td class="table-center">the Bird</td>';
-                         result +=  ' <td class="table-center">(555) 555-5555</td>';
-			  result += '<td class="table-center"><button type="button"  id="three" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+                      result +='<td class="table-center">the Bird</td>';
+                      result +=  ' <td class="table-center">(555) 555-5555</td>';
+			result +='<td class="table-center"><button type="button" id="three1" class="btn btn-primary btn-sm show">Show</button> </td>'
+			result += '<td class="table-center"><button type="button"  id="three2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
                       result +=    '</tr>';
                       result +=    '<tr>';
-
                        result +=    ' <td class="table-center">Mark</td>';
                           result +=  '<td class="table-center">Otto</td>';
                          result +=   '<td class="table-center">(555) 555-5555</td>';
-			  result += '<td class="table-center"><button type="button"  id="four" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+			result +='<td class="table-center"><button type="button" id="four1" class="btn btn-primary btn-sm show">Show</button> </td>'
+			  result += '<td class="table-center"><button type="button"  id="four2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
                         result +=  '</tr>';
                        result +=   '<tr>';
-
                        result +=    ' <td class="table-center">Jacob</td>';
                       result +=      '<td class="table-center">Thornton</td>';
                       result +=      '<td class="table-center">(555) 555-5555</td>';
-		  result +=	'<td class="table-center"><button type="button"  id="five" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+			result +='<td class="table-center"><button type="button" id="five1" class="btn btn-primary btn-sm show">Show</button> </td>'
+		  result +=	'<td class="table-center"><button type="button"  id="five2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
                       result +=  '  </tr>';
-                       result +=  ' <tr>';
-
-                        result +=  '  <td class="table-center">Larry</td>';
+                      result +=  ' <tr>';
+                      result +=  '  <td class="table-center">Larry</td>';
                       result +=    '<td class="table-center">the Bird</td>';
                       result +=    '<td class="table-center">(555) 555-5555</td>';
-			result += '<td class="table-center"><button type="button"  id="six" class="btn btn-primary btn-sm edit">Edit</button> </td>';
-                   result +=     '</tr>';
-                    result +=    '<tr>';
-
+			result +='<td class="table-center"><button type="button" id="six1" class="btn btn-primary btn-sm show">Show</button> </td>'
+			result += '<td class="table-center"><button type="button"  id="six2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+                   	result +=     '</tr>';
+                    	result +=    '<tr>';
                       result +=   ' <td class="table-center">Larry</td>';
                       result +=    '<td class="table-center">the Bird</td>';
                       result +=    '<td class="table-center">(555) 555-5555</td>';
-			result += '<td class="table-center"><button type="button"  id="seven" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+			result +='<td class="table-center"><button type="button" id="seven1" class="btn btn-primary btn-sm show">Show</button> </td>'
+			result += '<td class="table-center"><button type="button"  id="seven2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
                      result +=   '</tr>';
                      result +=   '<tr>';
-
                        result +=  ' <td class="table-center">Larry</td>';
                         result +=  '<td class="table-center">the Bird</td>';
                       result +=    '<td class="table-center">(555) 555-5555</td>';
-			result += '<td class="table-center"><button type="button"  id="eight" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+			result +='<td class="table-center"><button type="button" id="eight1" class="btn btn-primary btn-sm show">Show</button> </td>'
+			result += '<td class="table-center"><button type="button"  id="eight2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
                       result +=  '</tr>';
                       result +=  '<tr>';
-
                       result +=   ' <td class="table-center">Larry</td>';
                        result +=   '<td class="table-center">the Bird</td>';
                         result +=  '<td class="table-center">(555) 555-5555</td>';
-			result +='<td class="table-center"><button type="button"  id="nine" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+			result +='<td class="table-center"><button type="button" id="nine1" class="btn btn-primary btn-sm show">Show</button> </td>'
+			result +='<td class="table-center"><button type="button"  id="nine2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
                      result +=   '</tr>';
                     result +=  '</tbody>';
                     result +='</table>';
-	//}
-	//result += "</table>";
 	
 	return result;
     }
 
 
-function processEdit(){
+function showInfo(){
 	 $('#VolInfo').show();
 	$('#VolInfoTitle').show();
  /*   $('#searchresults').empty();
@@ -206,7 +206,8 @@ function processResults(results) {
 	{
    $('#searchresults').append(buildTable(results));
 	}
-    $(".edit").click(processEdit);
+    $(".show").click(showInfo);
+	//$(".edit").click();
     //$(".delete").click(processDelete);
    // $('#addmessage').text($('#addfirst').val()+" "+$('#addlast').val()+ " ADDED");
    
