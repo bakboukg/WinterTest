@@ -58,27 +58,98 @@ changeOperation(operation);
 // Build output table from comma delimited list
 function buildTable(list) {
 	
-    var a = list.split(",");
+  /*  var a = list.split(",");
     if (a.length < 1) {
 	return "<h3>Internal Error</h3>";
     } else if (a.length == 1) {
 	return "<h3>Nothing Found</h3>";
     } else {
-	var result = '<table class="w3-table-all w3-hoverable" border="2"><tr><th>First</th><th>Last</th><th>Phone</th><th>Type</th><th>Action</th><tr>';
-	var aLen = a.length;
-	for (var i = 1; i < aLen; i+=5) {
-	    result += "<tr><td class='first'>"+a[i]+"</td><td class='last'>"+a[i+1]+"</td><td class='phone'>"+a[i+2]+"</td><td class='type'>"+a[i+3]+"</td>";
-	    result += "<td><button type='button' ID='"+a[i+4]+"' class='btn btn-primary btn-sm edit'>Edit</button> ";
-	    result += "<button type='button' ID='"+a[i+4]+"' class='btn btn-primary btn-sm delete'>Delete</button></td></tr>";
-	}
-	result += "</table>";
+    */
+	var result = '<table class="table table-hover table-bordered" style="font-size:12px" >';
+	result += '<thead class="thead-dark tablehead-center">';
+	//var aLen = a.length;
+	//for (var i = 1; i < aLen; i+=5) {
+	    result += '
+                        <tr>
+                          <th scope="col">First</th>
+                          <th scope="col">Last</th>
+                          <th scope="col">Phone Number</th>
+			  <th scope="col">Options</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="table-center">Mark</td>
+                          <td class="table-center">Otto</td>
+                          <td class="table-center">(555) 555-5555</td>
+			<td class="table-center"><button type='button' id="one" class='btn btn-primary btn-sm edit'>Edit</button> </td>
+                        </tr>
+                        <tr>
+                          <td class="table-center">Jacob</td>
+                          <td class="table-center">Thornton</td>
+                          <td class="table-center">(555) 555-5555</td>
+			<td class="table-center"><button type='button'  id="two" class='btn btn-primary btn-sm edit'>Edit</button> </td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Larry</td>
+                          <td class="table-center">the Bird</td>
+                          <td class="table-center">(555) 555-5555</td>
+			<td class="table-center"><button type='button'  id="three" class='btn btn-primary btn-sm edit'>Edit</button> </td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Mark</td>
+                          <td class="table-center">Otto</td>
+                          <td class="table-center">(555) 555-5555</td>
+			<td class="table-center"><button type='button'  id="four" class='btn btn-primary btn-sm edit'>Edit</button> </td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Jacob</td>
+                          <td class="table-center">Thornton</td>
+                          <td class="table-center">(555) 555-5555</td>
+			<td class="table-center"><button type='button'  id="five" class='btn btn-primary btn-sm edit'>Edit</button> </td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Larry</td>
+                          <td class="table-center">the Bird</td>
+                          <td class="table-center">(555) 555-5555</td>
+			<td class="table-center"><button type='button'  id="six" class='btn btn-primary btn-sm edit'>Edit</button> </td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Larry</td>
+                          <td class="table-center">the Bird</td>
+                          <td class="table-center">(555) 555-5555</td>
+			<td class="table-center"><button type='button'  id="seven" class='btn btn-primary btn-sm edit'>Edit</button> </td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Larry</td>
+                          <td class="table-center">the Bird</td>
+                          <td class="table-center">(555) 555-5555</td>
+			<td class="table-center"><button type='button'  id="eight" class='btn btn-primary btn-sm edit'>Edit</button> </td>
+                        </tr>
+                        <tr>
+
+                          <td class="table-center">Larry</td>
+                          <td class="table-center">the Bird</td>
+                          <td class="table-center">(555) 555-5555</td>
+			<td class="table-center"><button type='button'  id="nine" class='btn btn-primary btn-sm edit'>Edit</button> </td>
+                        </tr>
+                      </tbody>
+                    </table>';
+	//}
+	//result += "</table>";
 	
 	return result;
     }
 }
-/*
+
 function processEdit(){
-    $('#searchresults').empty();
+ /*   $('#searchresults').empty();
     $('.editdata').show();
     $("#edit-btn").click(editEntry);
     console.log("Edit Record: " + $(this).attr('ID'));
@@ -90,8 +161,9 @@ function processEdit(){
     $('#editlast').val( $(row).find('.last').text());
     $('#editphone').val( $(row).find('.phone').text());
     $('#edittype').val( $(row).find('.type').text());
+    */
 }
-
+/*
 function editDone() {
     $('#editmessage').text($('#editfirst').val()+" "+$('#editlast').val()+ " SAVED");
 }
@@ -121,16 +193,16 @@ function processDelete(){
 }
 */
 function processResults(results) {
-	/*
-    $('#editmessage').empty();
-    $('#addmessage').empty();
+	
+  //  $('#editmessage').empty();
+    //$('#addmessage').empty();
     console.log("Results:"+results);
-    $('#searchresults').empty();
+   // $('#searchresults').empty();
     $('#searchresults').append(buildTable(results));
     $(".edit").click(processEdit);
-    $(".delete").click(processDelete);
-    $('#addmessage').text($('#addfirst').val()+" "+$('#addlast').val()+ " ADDED");
-   */ 
+    //$(".delete").click(processDelete);
+   // $('#addmessage').text($('#addfirst').val()+" "+$('#addlast').val()+ " ADDED");
+   
 }
 
 function clearResults() {
