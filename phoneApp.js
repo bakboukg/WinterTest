@@ -43,8 +43,6 @@ changeOperation(operation);
 
     if(operation=="SearchAll"){
 	$('#VolunteerList').show();
-	    $('#VolInfo').show();
-	$('#VolInfoTitle').show();
 
        }
 	else {
