@@ -23,9 +23,10 @@ $(document).ready(function able() {
 	//changeOperation(operation);
 	  });
 	
-	 $("#editEntry").click(function(){
+	/* $("#editEntry").click(function(){
 		 $('#VolInfo').show();
 		$('#VolInfoTitle').show();
+		*/
 		
 });
 });
@@ -81,7 +82,6 @@ function buildInfo(list) {
 
                            result += '</tbody>';
                        result += '</table>';
-                  result +=  '</div>';
 		return result;
 }
 // Build output table from comma delimited list
@@ -236,6 +236,8 @@ function processResults(results) {
 	if (infobuilt==false)
 	{
    $('#searchinfo').append(buildInfo(results));
+	 $('#VolInfo').show();
+	$('#VolInfoTitle').show();
 	}
    // $(".show").click(showInfo);
 	//$(".edit").click();
