@@ -13,7 +13,16 @@ $(document).ready(function () {
 	console.log("hidden");
     operation = "SearchAll";
 
-  
+  function changeOperation(operation){
+	  $('#SearchOptions li a').click(function(){
+	console.log("pick!"+$(this).text());
+	//$(this).parents(".btn-group").find('.selection').text($(this).text());
+	operation=$(this).text();
+	//changeOperation(operation);
+	    
+
+
+});
 });
 
  var response = prompt("Enter Password:");
@@ -28,16 +37,7 @@ alert("Hello, Molly" );
 
 changeOperation(operation);
 
-function changeOperation(operation){
-	  $('#SearchOptions li a').click(function(){
-	console.log("pick!"+$(this).text());
-	//$(this).parents(".btn-group").find('.selection').text($(this).text());
-	operation=$(this).text();
-	//changeOperation(operation);
-	    
 
-
-});
     if(operation=="SearchAll"){
 	$('#VolunteerList').show();
 	    $('#VolInfo').show();
