@@ -2,7 +2,7 @@
 // Jim Skon, Kenyon College, 2017
 var operation;  // operation
 var editid;
-//src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
 src="https://code.jquery.com/jquery-3.2.1.min.js";
 
 
@@ -129,7 +129,7 @@ function clearResults() {
 
 function getMatches(){
 	console.log("Day"+$('#DaysList').val()+" Shift"+$('#ShiftsList').val()+" Side"+$('#SidesList').val());
-    jQuery.ajax({
+    $.ajax({
 	url: '/cgi-bin/bakboukg_phoneAppComplete.cgi?find='+$('#DaysList').val()+$('#ShiftsList').val()+$('#SidesList').val(),
 	dataType: 'text',
 	success: processResults,
