@@ -60,13 +60,7 @@ changeOperation(operation);
 
 function buildInfo(list) {
 	infobuilt=true;
-	 var result = '<div class="row px-3">';
-                      result +='  <div id="VolInfoTitle">';
-                            result +='<h6 style="color: white">Volunteer Info</h6>';
-                     result +=   '</div>';
-                    result +='</div>';
-                result +=    '<div class="row px-3" id="VolInfo">';
-                        result +='<table class="table table-borderless" style="font-size:14px">';
+	 var result ='<table class="table table-borderless" style="font-size:14px">';
                             result +='<tbody>';
                                result += '<tr>';
                                    result += '<td class="table-left"> <b>Name:</b> John </td>';
