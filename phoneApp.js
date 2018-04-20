@@ -242,9 +242,9 @@ function processResults(results) {
 	if (infobuilt==false)
 	{
    $('#searchinfo').append(buildInfo(results));
-	 $('#searchinfo').show();
-	$('#VolInfo').show();
-	$('#VolInfoTitle').show();
+	// $('#searchinfo').show();
+	//$('#VolInfo').show();
+	//$('#VolInfoTitle').show();
 	}
    $(".show").click(showInfo);
 	//$(".edit").click();
