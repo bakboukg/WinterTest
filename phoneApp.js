@@ -3,11 +3,12 @@
 var operation;  // operation
 var editid;
 var tablebuilt=false;
+var infobuilt=false;
 //src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
 //src="https://code.jquery.com/jquery-3.2.1.min.js";
 
 
-$(document).ready(function () {
+$(document).ready(function able() {
     $('#VolunteerList').hide();
 	$('#VolInfo').hide();
 	$('#VolInfoTitle').hide();
@@ -57,6 +58,38 @@ changeOperation(operation);
 	
 }
 
+function buildInfo(list) {
+	infobuilt=true;
+	 var result = '<div class="row px-3">';
+                      result +='  <div id="VolInfoTitle">';
+                            result +='<h6 style="color: white">Volunteer Info</h6>';
+                     result +=   '</div>';
+                    result +='</div>';
+                result +=    '<div class="row px-3" id="VolInfo">';
+                        result +='<table class="table table-borderless" style="font-size:14px">';
+                            result +='<tbody>';
+                               result += '<tr>';
+                                   result += '<td class="table-left"> <b>Name:</b> John </td>';
+                                   result += '<td class="table-left"><b>Email 1: </b> jjcoolboy@hotmail.com</td>';
+                              result += ' </tr>';
+                               result += '<tr>';
+                                   result += '<td class="table-left"><b>Address: </b> 106 Gaskin Ave</td>';
+                                  result +=  '<td class="table-left"><b>Email 2: </b> surfbro217@gmail.com</td>';
+                               result += '</tr>';
+                               result += '<tr>';
+                                   result += '<td class="table-left"><b>City: </b> Gambier</td>';
+                                   result += '<td class="table-left"><b>Phone 1: </b> (740) 406-0959</td>';
+                               result += '</tr>';
+                               result += '<tr>';
+                                   result += '<td class="table-left"><b>Zipcode: </b> 43022</td>';
+                                 result +=   '<td class="table-left"><b>Phone 2: </b> (740) 406-0959</td>';
+                             result +=   '</tr>';
+
+                           result += '</tbody>';
+                       result += '</table>';
+                  result +=  '</div>';
+		return result;
+}
 // Build output table from comma delimited list
 function buildTable(list) {
 	
@@ -206,7 +239,11 @@ function processResults(results) {
 	{
    $('#searchresults').append(buildTable(results));
 	}
-    $(".show").click(showInfo);
+	if (infobuilt==false)
+	{
+   $('#searchinfo').append(buildInfo(results));
+	}
+   // $(".show").click(showInfo);
 	//$(".edit").click();
     //$(".delete").click(processDelete);
    // $('#addmessage').text($('#addfirst').val()+" "+$('#addlast').val()+ " ADDED");
