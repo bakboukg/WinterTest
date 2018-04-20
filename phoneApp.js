@@ -148,6 +148,8 @@ function buildTable(list) {
 
 
 function processEdit(){
+	 $('#VolInfo').show();
+	$('#VolInfoTitle').show();
  /*   $('#searchresults').empty();
     $('.editdata').show();
     $("#edit-btn").click(editEntry);
@@ -197,7 +199,7 @@ function processResults(results) {
     //$('#addmessage').empty();
     console.log("Results:"+results);
    // $('#searchresults').empty();
-  //  $('#searchresults').append(buildTable(results));
+   $('#searchresults').append(buildTable(results));
     $(".edit").click(processEdit);
     //$(".delete").click(processDelete);
    // $('#addmessage').text($('#addfirst').val()+" "+$('#addlast').val()+ " ADDED");
