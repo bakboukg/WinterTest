@@ -69,30 +69,29 @@ function buildTable(list) {
 	result += '<thead class="thead-dark tablehead-center">';
 	//var aLen = a.length;
 	//for (var i = 1; i < aLen; i+=5) {
-	    result += '
-                        <tr>
-                          <th scope="col">First</th>
-                          <th scope="col">Last</th>
-                          <th scope="col">Phone Number</th>
-			  <th scope="col">Options</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="table-center">Mark</td>
-                          <td class="table-center">Otto</td>
-                          <td class="table-center">(555) 555-5555</td>
-			<td class="table-center"><button type='button' id="one" class='btn btn-primary btn-sm edit'>Edit</button> </td>
-                        </tr>
-                        <tr>
-                          <td class="table-center">Jacob</td>
-                          <td class="table-center">Thornton</td>
-                          <td class="table-center">(555) 555-5555</td>
-			<td class="table-center"><button type='button'  id="two" class='btn btn-primary btn-sm edit'>Edit</button> </td>
-                        </tr>
-                        <tr>
+	    result += '<tr>';
+                      result +=    <th scope="col">First</th>
+                      result +=    <th scope="col">Last</th>
+                      result +=    <th scope="col">Phone Number</th>
+			result +=  <th scope="col">Options</th>
+                     result +=   </tr>
+                    result +=  </thead>
+                     result += <tbody>
+                    result +=    <tr>
+                    result +=      <td class="table-center">Mark</td>
+                    result +=      <td class="table-center">Otto</td>
+                     result +=     <td class="table-center">(555) 555-5555</td>
+			result +=<td class="table-center"><button type='button' id="one" class='btn btn-primary btn-sm edit'>Edit</button> </td>
+                     result +=   </tr>
+                     result +=   <tr>
+                      result +=    <td class="table-center">Jacob</td>
+                      result +=    <td class="table-center">Thornton</td>
+                      result +=    <td class="table-center">(555) 555-5555</td>
+			result +=<td class="table-center"><button type='button'  id="two" class='btn btn-primary btn-sm edit'>Edit</button> </td>
+                      result +=  </tr>
+                      result +=  <tr>
 
-                          <td class="table-center">Larry</td>
+                      result +=    <td class="table-center">Larry</td>
                           <td class="table-center">the Bird</td>
                           <td class="table-center">(555) 555-5555</td>
 			<td class="table-center"><button type='button'  id="three" class='btn btn-primary btn-sm edit'>Edit</button> </td>
