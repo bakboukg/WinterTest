@@ -2,8 +2,8 @@
 // Jim Skon, Kenyon College, 2017
 var operation;  // operation
 var editid;
-src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
-src="https://code.jquery.com/jquery-3.2.1.min.js";
+//src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
+//src="https://code.jquery.com/jquery-3.2.1.min.js";
 
 
 $(document).ready(function () {
