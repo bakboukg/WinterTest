@@ -3,9 +3,7 @@
 var operation;  // operation
 var editid;
 src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
- var response = prompt("What is your name?");
 
-alert("Hello, " + response);
 
 $(document).ready(function () {
     $('#VolunteerList').hide();
