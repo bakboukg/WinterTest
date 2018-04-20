@@ -129,7 +129,7 @@ function clearResults() {
 
 function getMatches(){
 	console.log("Day"+$('#DaysList').val()+" Shift"+$('#ShiftsList').val()+" Side"+$('#SidesList').val());
-    $.ajax({
+    jQuery.ajax({
 	url: '/cgi-bin/bakboukg_phoneAppComplete.cgi?find='+$('#DaysList').val()+$('#ShiftsList').val()+$('#SidesList').val(),
 	dataType: 'text',
 	success: processResults,
