@@ -110,6 +110,7 @@ function processDelete(){
 }
 */
 function processResults(results) {
+	/*
     $('#editmessage').empty();
     $('#addmessage').empty();
     console.log("Results:"+results);
@@ -118,7 +119,7 @@ function processResults(results) {
     $(".edit").click(processEdit);
     $(".delete").click(processDelete);
     $('#addmessage').text($('#addfirst').val()+" "+$('#addlast').val()+ " ADDED");
-    
+   */ 
 }
 
 function clearResults() {
