@@ -19,6 +19,7 @@ $(document).ready(function () {
 
 
 });
+}
  var response = prompt("What is your name?");
 
 alert("Hello, " + response);
