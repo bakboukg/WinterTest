@@ -46,6 +46,7 @@ changeOperation(operation);
 
        }
 	else {
+		$('#searchresults').clear();
 		getMatches();
 	$('#VolunteerList').hide();
 	    $('#VolInfo').hide();
