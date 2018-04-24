@@ -50,6 +50,7 @@ changeOperation(operation);
 	$('#VolunteerList').show();
 	      $('#searchinfo').hide();
 		$('#VolInfo').hide();
+	    getMatches();
 
        }
 	else {
