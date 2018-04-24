@@ -33,14 +33,14 @@ $(document).ready(function able() {
 
 });
 
- var response = prompt("Enter Password:");
+/* var response = prompt("Enter Password:");
 		
 while (response != "123")
 {
 	response = prompt("Wrong Password, please re-enter:");
 }
 alert("Hello, Molly" );
-
+*/
 
 
 changeOperation(operation);
