@@ -13,7 +13,7 @@ $(document).ready(function able() {
 	$('#searchinfo').hide();
 	$('#VolInfo').hide();
 	$('#VolInfoTitle').hide();
-	console.log("hidden");
+	console.log("hiddenfalalalAL");
     operation = "SearchAll";
 
 
