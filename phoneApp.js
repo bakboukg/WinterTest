@@ -23,23 +23,23 @@ $(document).ready(function able() {
 	operation=$(this).text();
 	//changeOperation(operation);
 	  });
-	
+
 	/* $("#editEntry").click(function(){
 		 $('#VolInfo').show();
 		$('#VolInfoTitle').show();
 		});
 		*/
-		
+
 
 });
 
- var response = prompt("Enter Password:");
-		
+/* var response = prompt("Enter Password:");
+
 while (response != "123")
 {
 	response = prompt("Wrong Password, please re-enter:");
 }
-alert("Hello, Molly" );
+alert("Hello, Molly" );*/
 
 
 
@@ -61,12 +61,12 @@ changeOperation(operation);
 	$('#VolInfoTitle').hide();
 
        }
-	
+
 }
 
 function buildInfo(list) {
 	infobuilt=true;
-	 var result ='<table class="table table-borderless" style="font-size:14px">';
+	 var result ='<table class="table table borderless" style="font-size:14px width:100%">';
                             result +='<tbody>';
                                result += '<tr>';
                                    result += '<td class="table-left"> <b>Name:</b> John </td>';
@@ -91,7 +91,7 @@ function buildInfo(list) {
 }
 // Build output table from comma delimited list
 function buildTable(list) {
-	
+
   /*  var a = list.split(",");
     if (a.length < 1) {
 	return "<h3>Internal Error</h3>";
@@ -100,7 +100,7 @@ function buildTable(list) {
     } else {
     */
 	tablebuilt=true;
-	var result = '<table class="table table-hover table-bordered" style="font-size:12px" >';
+	var result = '<table class="table table-hover borderless" style="font-size:12px" >';
 	result += '<thead class="thead-dark tablehead-center">';
 	//var aLen = a.length;
 	//for (var i = 1; i < aLen; i+=5) {
@@ -108,7 +108,8 @@ function buildTable(list) {
                       result +='<th scope="col">First</th>';
                       result +='<th scope="col">Last</th>';
                       result +='<th scope="col">Phone Number</th>';
-			result +='<th scope="col">Options</th>';
+			          result +='<th scope="col">Options</th>';
+
                       result += '</tr>';
                       result +='</thead>';
                       result +='<tbody>';
@@ -116,68 +117,68 @@ function buildTable(list) {
                       result += '<td class="table-center">Mark</td>';
                       result +=' <td class="table-center">Otto</td>';
                       result += '<td class="table-center">(555) 555-5555</td>';
-			result +='<td class="table-center"><button type="button" id="one1" class="btn btn-primary btn-sm show">Show</button> </td>'
-		      result +='<td class="table-center"><button type="button" id="one2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+
+		      result +='<td class="table-center"><button type="button" id="one2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
                       result += '</tr>';
                       result += '<tr>';
                       result += ' <td class="table-center">Jacob</td>';
                       result += '<td class="table-center">Thornton</td>';
                       result += '<td class="table-center">(555) 555-5555</td>';
-			result +='<td class="table-center"><button type="button" id="two1" class="btn btn-primary btn-sm show">Show</button> </td>'
-		      result += '<td class="table-center"><button type="button"  id="two2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+
+		      result += '<td class="table-center"><button type="button"  id="two2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
                       result +='</tr>';
                       result +='<tr>';
                       result +=   ' <td class="table-center">Larry</td>';
                       result +='<td class="table-center">the Bird</td>';
                       result +=  ' <td class="table-center">(555) 555-5555</td>';
-			result +='<td class="table-center"><button type="button" id="three1" class="btn btn-primary btn-sm show">Show</button> </td>'
-			result += '<td class="table-center"><button type="button"  id="three2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+
+			result += '<td class="table-center"><button type="button"  id="three2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
                       result +=    '</tr>';
                       result +=    '<tr>';
                        result +=    ' <td class="table-center">Mark</td>';
                           result +=  '<td class="table-center">Otto</td>';
                          result +=   '<td class="table-center">(555) 555-5555</td>';
-			result +='<td class="table-center"><button type="button" id="four1" class="btn btn-primary btn-sm show">Show</button> </td>'
-			  result += '<td class="table-center"><button type="button"  id="four2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+
+			  result += '<td class="table-center"><button type="button"  id="four2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
                         result +=  '</tr>';
                        result +=   '<tr>';
                        result +=    ' <td class="table-center">Jacob</td>';
                       result +=      '<td class="table-center">Thornton</td>';
                       result +=      '<td class="table-center">(555) 555-5555</td>';
-			result +='<td class="table-center"><button type="button" id="five1" class="btn btn-primary btn-sm show">Show</button> </td>'
-		  result +=	'<td class="table-center"><button type="button"  id="five2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+
+		  result +=	'<td class="table-center"><button type="button"  id="five2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
                       result +=  '  </tr>';
                       result +=  ' <tr>';
                       result +=  '  <td class="table-center">Larry</td>';
                       result +=    '<td class="table-center">the Bird</td>';
                       result +=    '<td class="table-center">(555) 555-5555</td>';
-			result +='<td class="table-center"><button type="button" id="six1" class="btn btn-primary btn-sm show">Show</button> </td>'
-			result += '<td class="table-center"><button type="button"  id="six2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+
+			result += '<td class="table-center"><button type="button"  id="six2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
                    	result +=     '</tr>';
                     	result +=    '<tr>';
                       result +=   ' <td class="table-center">Larry</td>';
                       result +=    '<td class="table-center">the Bird</td>';
                       result +=    '<td class="table-center">(555) 555-5555</td>';
-			result +='<td class="table-center"><button type="button" id="seven1" class="btn btn-primary btn-sm show">Show</button> </td>'
-			result += '<td class="table-center"><button type="button"  id="seven2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+
+			result += '<td class="table-center"><button type="button"  id="seven2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
                      result +=   '</tr>';
                      result +=   '<tr>';
                        result +=  ' <td class="table-center">Larry</td>';
                         result +=  '<td class="table-center">the Bird</td>';
                       result +=    '<td class="table-center">(555) 555-5555</td>';
-			result +='<td class="table-center"><button type="button" id="eight1" class="btn btn-primary btn-sm show">Show</button> </td>'
-			result += '<td class="table-center"><button type="button"  id="eight2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+
+			result += '<td class="table-center"><button type="button"  id="eight2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
                       result +=  '</tr>';
                       result +=  '<tr>';
                       result +=   ' <td class="table-center">Larry</td>';
                        result +=   '<td class="table-center">the Bird</td>';
                         result +=  '<td class="table-center">(555) 555-5555</td>';
-			result +='<td class="table-center"><button type="button" id="nine1" class="btn btn-primary btn-sm show">Show</button> </td>'
-			result +='<td class="table-center"><button type="button"  id="nine2" class="btn btn-primary btn-sm edit">Edit</button> </td>';
+
+			result +='<td class="table-center"><button type="button"  id="nine2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
                      result +=   '</tr>';
                     result +=  '</tbody>';
                     result +='</table>';
-	
+
 	return result;
     }
 
@@ -230,14 +231,14 @@ function processDelete(){
 }
 */
 function processResults(results) {
-	
+
   //  $('#editmessage').empty();
     //$('#addmessage').empty();
     console.log("Results:"+results);
    // $('#searchresults').empty();
 	if (tablebuilt==false)
 	{
-   $('#searchresults').append(buildTable(results));
+   $('#VolunteerList').append(buildTable(results));
 	}
 	if (infobuilt==false)
 	{
@@ -250,7 +251,7 @@ function processResults(results) {
 	//$(".edit").click();
     //$(".delete").click(processDelete);
    // $('#addmessage').text($('#addfirst').val()+" "+$('#addlast').val()+ " ADDED");
-   
+
 }
 
 /*function clearResults() {
