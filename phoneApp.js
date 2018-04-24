@@ -50,7 +50,7 @@ changeOperation(operation);
 	$('#VolunteerList').show();
 	      $('#searchinfo').hide();
 		$('#VolInfo').hide();
-	    getMatches();
+	   
 
        }
 	else {
@@ -238,7 +238,7 @@ function processResults(results) {
    // $('#searchresults').empty();
 	if (tablebuilt==false)
 	{
-   $('#searchresults').append(buildTable(results));
+   $('#VolunteerList').append(buildTable(results));
 	}
 	if (infobuilt==false)
 	{
