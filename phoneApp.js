@@ -101,7 +101,7 @@ function buildTable(list) {
     } else {
     */
 	tablebuilt=true;
-	var result += '<table class="table table-hover borderless" style="font-size:12px" >';
+	var result = '<table class="table table-hover borderless" style="font-size:12px" >';
     result += '<thead class="thead-dark tablehead-center">';
 
     result += '<tr>';
