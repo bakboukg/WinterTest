@@ -104,7 +104,7 @@ function buildTable(list) {
 	var result = '<table class="table table-hover borderless" style="font-size:12px" >';
     result += '<thead class="thead-dark tablehead-center">';
 
-    result += '<tr>';
+    result += '<tr onclick="showInfo()";>';
     result += '<th scope="col" style="border-radius:5px 0 0 0">First</th>';
     result += '<th scope="col">Last</th>';
     result += '<th scope="col">Side</th>';
@@ -125,7 +125,7 @@ function buildTable(list) {
     result += '<td class="table-center">Thornton</td>';
     result += '<td class="table-center">M</td>';
 
-    result += '<td class="table-center" onclick="showInfo()"; ><button type="button"  id="two2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
+    result += '<td class="table-center" ><button type="button"  id="two2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
     result += '</tr>';
     result += '<tr>';
     result += ' <td class="table-center">Laney</td>';
@@ -187,6 +187,7 @@ function showInfo(){
 	 $('#searchinfo').show();
 	$('#VolInfoTitle').show();
 	$('#VolInfo').show();
+	console.log("executed");
  /*   $('#searchresults').empty();
     $('.editdata').show();
     $("#edit-btn").click(editEntry);
