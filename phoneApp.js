@@ -113,7 +113,7 @@ function buildTable(list) {
 	var result = '<table class="table table-hover borderless" style="font-size:12px" >';
     result += '<thead class="thead-dark tablehead-center">';
 
-    result += '<tr onclick="showInfo()";>';
+    result += '<tr>';
     result += '<th scope="col" style="border-radius:5px 0 0 0">First</th>';
     result += '<th scope="col">Last</th>';
     result += '<th scope="col">Side</th>';
@@ -122,7 +122,7 @@ function buildTable(list) {
     result += '</tr>';
     result += '</thead>';
     result += '<tbody>';
-    result += ' <tr>';
+    result += ' <tr onclick="showInfo()";>';
     result += '<td class="table-center">Mary</td>';
     result += ' <td class="table-center">Otto</td>';
     result += '<td class="table-center">F or M</td>';
