@@ -125,7 +125,7 @@ function buildTable(list) {
     result += '<td class="table-center">Thornton</td>';
     result += '<td class="table-center">M</td>';
 
-    result += '<td class="table-center"><button type="button"  id="two2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
+    result += '<td class="table-center" onclick="showInfo()"; ><button type="button"  id="two2" class="btn btn-dark btn-sm edit">Edit</button> </td>';
     result += '</tr>';
     result += '<tr>';
     result += ' <td class="table-center">Laney</td>';
