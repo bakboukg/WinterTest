@@ -65,6 +65,15 @@ changeOperation(operation);
 	
 }
 
+$("#VolunteerList tr").click(function() {
+        $("#test1").html("clicked smth"); //testoutput
+        var href = $(this).find("a").attr("href");
+        if(href) {
+            $("#test2").html("clicked with" + href); //testoutput
+            window.location = href;
+        }
+    });
+
 function buildInfo(list) {
 	infobuilt=true;
 	 var result ='<table class="table table-borderless" style="font-size:14px">';
