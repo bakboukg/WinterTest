@@ -4,11 +4,34 @@ var operation;  // operation
 var editid;
 var tablebuilt=false;
 var infobuilt=false;
-//src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js";
-//src="https://code.jquery.com/jquery-3.2.1.min.js";
+var socket = io.connect('http://cslab.kenyon.edu:9007');
+var rows;
 
 
 $(document).ready(function able() {
+	socket.on('message', function(message) {
+  		if (message.operation == 'rows') {
+			processResults(message.rows);
+  		}
+  		if (message.operation == 'Add') {
+  			$('#modalMessage').text($('#addfirst').val()+" "+$('#addlast').val()+ ": "+message.Status);
+  		  	$('#modalTitle').text("Record Add");
+  			$('#addchangemodal').modal('show');
+  			$('#addfirst').val("");
+  			$('#addlast').val("");
+  			$('#addphone').val("");
+  			$('#addtype').val("");
+  		}
+  		if (message.operation == 'update') {
+  		  	$('#modalMessage').text($('#editfirst').val()+" "+$('#editlast').val()+ ": "+message.Status);
+  		  	$('#modalTitle').text("Record Change");
+  			$('#addchangemodal').modal('show');
+  		}
+  		if (message.operation == 'delete') {
+  			$('#searchresults').text("Deleted: "+rows[recIndex].First+" "+rows[recIndex].Last);
+  		}
+  	});
+	
     $('#VolunteerList').hide();
 	$('#searchinfo').hide();
 	$('#VolInfo').hide();
@@ -100,15 +123,27 @@ function buildInfo(list) {
 		return result;
 }
 // Build output table from comma delimited list
-function buildTable(list) {
+function buildTable(rows) {
+	if (rows.length < 1) {
+		return "<h3>Nothing Found</h3>";
+	} else {
+	var result = '<table class="table table-hover borderless" style="font-size:12px" ><thead class="thead-dark tablehead-center">';
+		result += '<tr>';
+    result += '<th scope="col" style="border-radius:5px 0 0 0">First</th>';
+    result += '<th scope="col">Last</th>';
+    result += '<th scope="col">Side</th>';
+    result += '<th scope="col" style="border-radius:0 5px 0 0">Option</th>';
+
+	for (var i=0;i<rows.length;i++) {
+		console.log("row:"+JSON.stringify(rows[i]));
+		result += "<tr onclick='showInfo()';><td class='table-center'>"+rows[i].First_Name+"</td><td class='table-center'>"+rows[i].Last_Name+"<td class='table-center'>"+rows[i].Side+"</td>";
+		result += '<td class="table-center" ><button type="button"  id='"+rows[i].Volunteer_ID+"'class="btn btn-dark btn-sm edit">Edit</button> </td>';
+	}
+	result += "</table>";
 	
-  /*  var a = list.split(",");
-    if (a.length < 1) {
-	return "<h3>Internal Error</h3>";
-    } else if (a.length == 1) {
-	return "<h3>Nothing Found</h3>";
-    } else {
-    */
+	return result;
+	}
+/*
 	tablebuilt=true;
 	var result = '<table class="table table-hover borderless" style="font-size:12px" >';
     result += '<thead class="thead-dark tablehead-center">';
@@ -189,6 +224,7 @@ function buildTable(list) {
     result += '</table>';
 	
 	return result;
+    */
     }
 
 
@@ -269,13 +305,12 @@ function processResults(results) {
 }
 */
 function getMatches(){
-	console.log("Day"+$('#DaysList').val()+" Shift"+$('#ShiftsList').val()+" Side"+$('#SidesList').val());
-    $.ajax({
-	url: '/cgi-bin/bakboukg_phoneAppComplete.cgi?find='+$('#DaysList').val()+$('#ShiftsList').val()+$('#SidesList').val(),
-	dataType: 'text',
-	success: processResults,
-	error: function(){alert("Error: Something went wrong");}
-    });
+	var search = $('#Search').val();
+	//$('#searchresults').empty();
+  	socket.emit('message', {
+    	operation: operation,
+    	searchText: search
+  	});
 }
 
 /*function addEntry(){
