@@ -137,7 +137,7 @@ function buildTable(rows) {
 	for (var i=0;i<rows.length;i++) {
 		console.log("row:"+JSON.stringify(rows[i]));
 		result += "<tr onclick='showInfo()';><td class='table-center'>"+rows[i].First_Name+"</td><td class='table-center'>"+rows[i].Last_Name+"<td class='table-center'>"+rows[i].Side+"</td>";
-		result += '<td class="table-center" ><button type="button"  id='"+rows[i].Volunteer_ID+"'class="btn btn-dark btn-sm edit">Edit</button> </td>';
+		result += '<td class="table-center" ><button type="button"  id="+rows[i].Volunteer_ID+"class="btn btn-dark btn-sm edit">Edit</button> </td>';
 	}
 	result += "</table>";
 	
