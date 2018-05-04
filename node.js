@@ -1,6 +1,7 @@
 var mysql = require('mysql');
 var http = require('http');
 var fs = require('fs');
+var io = require('socket.io').listen(server);
 var con = mysql.createConnection({
     host: "localhost",
     user: "bakboukg",
@@ -43,7 +44,7 @@ var server = http.createServer(function(req, res) {
 });
 
 // Set up socket.io communication
-var io = require('socket.io').listen(server);
+
 
 // When a client connects, we note it in the console
 io.sockets.on('connection', function(socket) {
