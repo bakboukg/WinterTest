@@ -18,7 +18,7 @@ var server = http.createServer(function(req, res) {
   if (url == "/") url = "/phoneApp.html";
   // get the file extension (needed for Content-Type)
   var ext = url.split('.').pop();
-  //console.log(url + "  :  " + ext);
+   console.log(url + "  :  " + ext);
   // convert file type to correct Content-Type
   var memeType = 'text/html'; // default
   switch (ext) {
