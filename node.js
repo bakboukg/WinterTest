@@ -3,13 +3,13 @@ var http = require('http');
 var fs = require('fs');
 var io = require('socket.io').listen(server);
 var con = mysql.createConnection({
-    host: "localhost",
+    host: "%",
     user: "bakboukg",
     password: "S215535",
     database: "WinterSanctuary"
 });
 con.connect(function(err) {
-	console.log ("failed");
+	console.log ("SQL Connection failed");
     	if (err) throw err;
 });
 
@@ -127,4 +127,5 @@ function UpdateRow(query,socket) {
 	});
 }
 //Everyone must use own port > 8000
+console.log("Start server on 9007");
 server.listen(9007);
