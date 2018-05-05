@@ -9,7 +9,7 @@ var con = mysql.createConnection({
     database: "WinterSanctuary"
 });
 con.connect(function(err) {
-	console..log ("failed");
+	console.log ("failed");
     	if (err) throw err;
 });
 
