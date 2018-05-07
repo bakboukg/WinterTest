@@ -50,6 +50,7 @@ var server = http.createServer(function(req, res) {
       res.setHeader("Content-Type", memeType);
       res.end(content);
   });
+	console.log(url);
 });
 
 // Set up socket.io communication
