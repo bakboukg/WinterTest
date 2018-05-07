@@ -60,6 +60,10 @@ var server = http.createServer(function(req, res) {
 io.sockets.on('connection', function(socket) {
     socket.on('letter', function (letter){
 	console.log(letter);
+	    if (letter=="/")
+	    {
+		    console.log("not getting it");
+	    }
     });
 	     
 	      
