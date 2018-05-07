@@ -53,6 +53,11 @@ var server = http.createServer(function(req, res) {
 
 // When a client connects, we note it in the console
 io.sockets.on('connection', function(socket) {
+    socket.on('letter', function (letter){
+	console.log(letter);
+    });
+	     
+	      
   // watch for message from client (JSON)
   socket.on('message', function(message) {
     console.log('Client Command:'+message.operation);

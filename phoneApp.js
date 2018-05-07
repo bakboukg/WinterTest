@@ -9,6 +9,7 @@ var rows;
 
 
 $(document).ready(function able() {
+    socket.emit ('letter', "halo");
 	socket.on('message', function(message) {
   		if (message.operation == 'rows') {
 			processResults(message.rows);
@@ -64,7 +65,6 @@ while (response != "123")
 }
 alert("Hello, Molly" );
 */
-
 
 changeOperation(operation);
   function changeOperation(operation){
@@ -251,7 +251,8 @@ function showInfo(){
 function editDone() {
     $('#editmessage').text($('#editfirst').val()+" "+$('#editlast').val()+ " SAVED");
 }
-function editEntry(){
+*/
+/*function editEntry(){
     console.log("Attempting to edit an entry");
     console.log("Firstname:" + $('#editfirst').val() + "ID:" + editid);
     $('#searchresults').empty();
@@ -262,8 +263,8 @@ function editEntry(){
 	error: function(){alert("Error: Something went wrong");}
     });
 }
-
-
+*/
+/*
 function processDelete(){
     console.log("Attempting to delete an entry");
     $('#searchresults').empty();
