@@ -3,14 +3,18 @@ var http = require('http');
 var fs = require('fs');
 var io = require('socket.io').listen(server);
 var con = mysql.createConnection({
-    host: "%",
+    host: "localhost",
     user: "bakboukg",
     password: "S215535",
     database: "WinterSanctuary"
 });
 con.connect(function(err) {
-	console.log ("SQL Connection failed");
-    	if (err) throw err;
+	console.log ("SQL Connect Attempt");
+    if (err) {
+	throw err;
+    } else {
+	console.log("Sql Connect success!");
+    }
 });
 
 // Set up the Web server
@@ -51,7 +55,7 @@ var server = http.createServer(function(req, res) {
 io.sockets.on('connection', function(socket) {
   // watch for message from client (JSON)
   socket.on('message', function(message) {
-    //console.log('Client Command:'+message.operation);
+    console.log('Client Command:'+message.operation);
     if (message.operation == 'NameSearch') {
       query = "SELECT * FROM Volunteers WHERE Last_Name like '%"+message.searchText+"%'" + "SELECT * FROM Volunteers WHERE First_Name like '%"+message.searchText+"%'";
       sendQueryResults(query, socket);
@@ -76,7 +80,7 @@ io.sockets.on('connection', function(socket) {
 
 // Perform search, send results to caller
 function sendQueryResults(query,socket) {
-	//console.log(query);
+    console.log(query);
     con.query(query, function (err, result, fields) {
 		if (err) throw err;
 		var results = [];
