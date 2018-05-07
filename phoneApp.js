@@ -9,6 +9,7 @@ var rows;
 
 
 $(document).ready(function able() {
+	socket.emit('letter', "This is it");
 	socket.on('message', function(message) {
   		if (message.operation == 'rows') {
 			processResults(message.rows);
