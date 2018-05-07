@@ -64,6 +64,10 @@ io.sockets.on('connection', function(socket) {
 	    {
 		    console.log("not getting it");
 	    }
+	    else
+	    {
+		    console.log("ggots it");
+	    }
     });
 	     
 	      
